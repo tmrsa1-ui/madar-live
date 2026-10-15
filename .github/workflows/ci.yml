@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: install · build · offline demo
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build
+      - run: npm run build:demo
+      - name: لا أسرار في حزمة المتصفح
+        run: |
+          if grep -rE "OPENSKY_CLIENT_(ID|SECRET)" dist dist-demo; then
+            echo "::error::OpenSky credentials referenced in the browser bundle"; exit 1
+          fi

@@ -6,11 +6,23 @@
 
 <p>
   <a href="https://tmrsa1-ui.github.io/madar-live/"><img src="https://img.shields.io/badge/%D8%AC%D8%B1%D9%91%D8%A8%20%D8%A7%D9%84%D8%A2%D9%86-Live%20Demo-0b7285?style=for-the-badge" alt="جرّب الآن"></a>
+  <a href="https://github.com/tmrsa1-ui/madar-live/actions/workflows/ci.yml"><img src="https://github.com/tmrsa1-ui/madar-live/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI"></a>
+  <img src="https://img.shields.io/badge/License-MIT-yellow?style=flat-square" alt="MIT">
   <img src="https://img.shields.io/badge/React-19-20232A?style=flat-square&logo=react" alt="React 19">
   <img src="https://img.shields.io/badge/Vite-7-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite 7">
   <img src="https://img.shields.io/badge/Three.js-globe.gl-000?style=flat-square&logo=threedotjs" alt="Three.js">
   <img src="https://img.shields.io/badge/deck.gl-9.4-1f6feb?style=flat-square" alt="deck.gl">
 </p>
+
+<p align="center">
+  <img src="docs/screenshots/globe.png" alt="كرة مدار ثلاثية الأبعاد مع آلاف الرحلات ولوحة الطبقات" width="820">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/mobile.png" alt="مدار على شاشة الجوال" width="260">
+</p>
+
+> اللقطات من نسخة العرض بلا شبكة (`npm run build:demo`)، فبيانات الطيران فيها محاكاة.
 
 ## ✨ وش فيه
 
@@ -58,6 +70,10 @@ server/         وسيط التطوير المحلي
 ## 🌐 النشر
 
 يُبنى ويُنشر تلقائيًا على GitHub Pages عبر GitHub Actions عند الدفع إلى `main`. يدعم أيضًا Netlify وVercel (`netlify.toml`، `vercel.json`).
+
+## 🔒 الأمان والرخصة
+
+راجع [`SECURITY.md`](SECURITY.md) و[`CHANGELOG.md`](CHANGELOG.md). الكود تحت رخصة [MIT](LICENSE).
 
 ## 🙏 مصادر البيانات
 
